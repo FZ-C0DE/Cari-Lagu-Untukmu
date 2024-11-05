@@ -1,0 +1,141 @@
+:root {
+    --spotify-green: #1DB954;
+    --spotify-black: #191414;
+    --spotify-white: #FFFFFF;
+    --spotify-gray: #282828;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background: var(--spotify-black);
+    color: var(--spotify-white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--spotify-green);
+}
+
+.search-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    background: var(--spotify-gray);
+    color: var(--spotify-white);
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: var(--spotify-green);
+    color: var(--spotify-white);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.advanced-search {
+    background: var(--spotify-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+select, input[type="range"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--spotify-black);
+    color: var(--spotify-white);
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.song-card {
+    background: var(--spotify-gray);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.song-info {
+    margin-bottom: 1rem;
+}
+
+#player {
+    width: 100%;
+    height: 80px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    color: var(--spotify-gray);
+}
+
+@media (max-width: 768px) {
+    .search-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
